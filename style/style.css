@@ -8,6 +8,7 @@
     --cor-quarta: #002147;
     --cor-quinta: #efeae4;
     --cor-sétima: #000000;
+    --cor-oitava: #FFD700;
 
     --peso-fonte: 500;
     --fonte-primaria: "Krona One", sans-serif;
@@ -155,6 +156,29 @@ body {
 .apresentacao__links__navegacao:hover {   
     border: 2px solid var(--cor-secundaria);
     background-color: var(--cor-quarta);
+    padding: 1%; 
+}
+
+.rodape_link {
+    display: flex;
+    justify-content: center;
+    align-items: Center;
+    gap: 16px;
+    width: 50%;
+    text-align: center;
+    border-radius: 8px;
+    border: 2px solid var(--cor-quarta);
+    font-size: 0.9375rem;
+    font-weight: 400;
+    padding: 5px 18px;
+    text-decoration: none;
+    color: var(--cor-sétima);
+    font-family: var(--fonte-primaria);
+}
+
+.rodape_link:hover {
+    border: 2px solid var(--cor-quarta);
+    background-color: var(--cor-oitava);
     padding: 1%; 
 }
 
