@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contate-nos</title>
     <link rel="stylesheet" href="./style/style.css">
-    <link rel="stylesheet" href="./styles/cardapio.css">
+    <link rel="stylesheet" href="./style/contato.css">
 </head>
 <body>
     <header class="cabeca">
@@ -18,8 +18,56 @@
     <main class="apresentacao">
         <section class="apresentacao__conteudo">
             <h1 class="apresentacao__conteudo__titulo">Faça seu orçamento:</h1>
+
+            <fieldset>
+
+                <div class="form_group">
+                <label for="name">Name</label>
+                <input id="name" type="text" name="userName">
+                </div>
+
+                <br>
+
+                <div class="form_group">
+                    <label for="comment">Conte-nos o que está acontecendo:</label>
+                    <textarea id="comment" name="userComment" placeholder=" Digite aqui o problema que está acontecendo..."></textarea>
+                </div>
+
+            </fieldset>
+
+            <script>
+            function enviarParaWhatsApp() {
+                // 1. Captura os valores dos campos
+                const nome = document.getElementById('name').value;
+                const comentario = document.getElementById('comment').value;
+    
+                // 2. Configure seu número aqui (Ex: 55 + DDD + Numero)
+                const telefone = "5519997553457"; 
+
+                // 3. Validação simples
+                if (nome.trim() === "" || comentario.trim() === "") {
+                    alert("Por favor, preencha todos os campos antes de enviar.");
+                    return;
+                }
+
+                // 4. Formata a mensagem (o %0A serve para quebrar a linha no WhatsApp)
+                let mensagem = `*Solicitação de Orçamento*%0A%0A`;
+                mensagem += `*Nome:* ${encodeURIComponent(nome)}%0A`;
+                mensagem += `*Descrição:* ${encodeURIComponent(comentario)}`;
+
+                // 5. Monta a URL final
+                const url = `https://api.whatsapp.com/send?phone=${telefone}&text=${mensagem}`;
+
+                // 6. Abre o WhatsApp em uma nova aba
+                window.open(url, '_blank');
+            }
+            </script>
+            
+
+            <button class="whatsapp" type="button" onclick="enviarParaWhatsApp()" aria-label="Enviar para WhatsApp">Enviar para WhatsApp</button>
         </section>
     <img class="apresentacao__imagem" src="./assests/" alt="">
     </main>
+    <footer class="rodape"></footer>
 </body>
 </html>
