@@ -1,0 +1,114 @@
+:root {
+    --cor-primaria: #8ac0ec;
+    --cor-secundaria: #34506a;
+    --cor-terceira: #658ab1;
+    --cor-quarta: #c5b8ee;
+    --cor-quinta: #efeae4;
+
+    --peso-fonte: 500;
+    --fonte-primaria: "Krona One", sans-serif;
+    --fonte-secundaria: "Montserrat", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: var(--cor-quinta);
+    color: var(--cor-secundaria);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+textarea {
+    width: 100%;
+    height: 150px; 
+    resize: none;
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.whatsapp {
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 0.9375rem;
+    font-weight: 400;
+    padding: 5px;
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    font-family: var(--fonte-primaria);
+}
+
+.whatsapp:hover {   
+    border: 2px solid var(--cor-secundaria);
+    background-color: var(--cor-quarta);
+    padding: 1%;
+}
+
+.rodape {
+    width: 100%;
+    background-color: #34495e; 
+    padding: 20px 0;           
+    margin-top: auto;          
+}
+
+@media (max-width: 1200px) {
+    .cabeca {
+        padding: 5%;
+    }
+
+    .cabeca__menu {
+        justify-content: center;
+    }
+
+    .apresentacao__conteudo__titulo {
+        padding: 0% 4% 0% 4%;
+        font-size: 1.5rem;
+    }
+
+    .apresentacao__conteudo__subtitulo {
+        padding: 0% 4% 0% 4%;
+        font-size: 1.25rem;
+    }
+
+    .apresentacao__conteudo__service__container{
+        flex-direction: column;
+        padding: 5%;
+    }
+
+    .imagens_exemplos {
+        width: 70%; 
+        height: auto;
+        border-style: groove;
+        border-radius: 20px; 
+    }
+
+    .apresentacao__conteudo {
+        width: auto;
+    }
+    
+}
