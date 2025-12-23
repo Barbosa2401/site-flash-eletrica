@@ -26,7 +26,7 @@ body {
 }
 
 .cabeca {
-    padding: 1% 0% 0% 10%;
+    padding: 2% 0% 0% 8%;
     background-color: var(--cor-secundaria);
 }
 
@@ -39,17 +39,16 @@ body {
     font-family: var(--fonte-secundaria);
     font-size: 1.12rem;
     font-weight: 600;
-    padding: 0% 0% 2% 0%;
     color:var(--cor-quinta);
     text-decoration: none;
 }
 
 .apresentacao {
-    padding: 4% 17%;
+    padding: 4% 8%;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 82px;
+    gap: 60px;
 }
 
 .apresentacao__conteudo {
@@ -65,13 +64,36 @@ body {
 }
 
 .apresentacao__conteudo__subtitulo {
-     font-size: 1.5rem;
+    font-size: 1.5rem;
     font-family: var(--fonte-primaria);
 }
 
-.apresentacao__conteudo__paragrafo {
-    font-size: 1.25rem;
+.apresentacao__conteudo__service__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.apresentacao__conteudo__service {
     font-family: var(--fonte-secundaria);
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: auto;
+    flex: 2;
+}
+
+.imagens_exemplos {
+    flex: 1;
+    width: 50%; 
+    height: auto;
+    border-radius: 20px; 
+    border: 2px solid var(--cor-primaria);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 1);
 }
 
 .apresentacao__links {
@@ -92,7 +114,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 16px;
-    border: 2px solid var(--cor-primaria);
+    
     width: 50%;
     text-align: center;
     border-radius: 8px;
@@ -110,6 +132,8 @@ body {
     padding: 1%; 
 }
 
+
+
 .rodape {
     color: var(--cor-quinta);
     background-color: var(--cor-secundaria);
@@ -124,16 +148,31 @@ body {
 
 @media (max-width: 1200px) {
     .cabeca {
-        padding: 10%;
+        padding: 5%;
     }
 
     .cabeca__menu {
         justify-content: center;
     }
 
-    .apresentacao {
-        flex-direction: column-reverse;
+    .apresentacao__conteudo__titulo {
+        font-size: 1.5rem;
+    }
+
+    .apresentacao__conteudo__subtitulo {
+        font-size: 1.25rem;
+    }
+
+    .apresentacao__conteudo__service__container{
+        flex-direction: column;
         padding: 5%;
+    }
+
+    .imagens_exemplos {
+        width: 70%; 
+        height: auto;
+        border-style: groove;
+        border-radius: 20px; 
     }
 
     .apresentacao__conteudo {
