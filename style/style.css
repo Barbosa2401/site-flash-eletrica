@@ -5,8 +5,9 @@
     --cor-primaria: #8ac0ec;
     --cor-secundaria: #34506a;
     --cor-terceira: #658ab1;
-    --cor-quarta: #c5b8ee;
+    --cor-quarta: #002147;
     --cor-quinta: #efeae4;
+    --cor-sétima: #000000;
 
     --peso-fonte: 500;
     --fonte-primaria: "Krona One", sans-serif;
@@ -27,15 +28,38 @@ body {
 
 .cabeca {
     padding: 2% 0% 0% 8%;
-    background-color: var(--cor-secundaria);
+    position: relative; 
+    background-color: #002147; /* Azul escuro do logo */
+    height: 40px; /* Ajuste a altura do seu header */
 }
 
 .cabeca__menu {
     display: flex;
-    gap: 50px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0% 10%;
+    height: 100%;
+}
+
+.cabeca__logo {
+    position: absolute;
+    top: 10px;           /* Distância do topo */
+    left: 5%;            /* Alinhamento à esquerda */
+    width: 150px;        /* Tamanho do logo (ajuste como preferir) */
+    height: auto;
+    z-index: 10;         /* Garante que fique na frente de outros elementos */
+    
+    /* Opcional: Adiciona uma borda ou sombra para destacar do fundo branco */
+    filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.3));
+}
+
+.links {
+    display: flex;
+    gap: 20px;
 }
 
 .cabeca__menu__link {
+ 
     font-family: var(--fonte-secundaria);
     font-size: 1.12rem;
     font-weight: 600;
@@ -138,7 +162,7 @@ body {
 
 .rodape {
     color: var(--cor-quinta);
-    background-color: var(--cor-secundaria);
+    background-color: var(--cor-quarta);
     padding: 25px;
     text-align: center;
     font-family: var(--fonte-secundaria);
@@ -150,15 +174,21 @@ body {
 
 @media (max-width: 1200px) {
     .cabeca {
-        padding: 5%;
+        padding: 3%;
     }
 
     .cabeca__menu {
         justify-content: center;
+        padding: 1% 20%;
+    }
+
+
+      .cabeca__logo {
+        width: 100px;
     }
 
     .apresentacao__conteudo__titulo {
-        padding: 0% 4% 0% 4%;
+        padding: 4% 4% 0% 4%;
         font-size: 1.5rem;
     }
 
