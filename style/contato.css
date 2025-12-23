@@ -124,7 +124,8 @@ fieldset {
     }
 
     .cabeca__logo {
-        width: 100px;
+        width: 80px;
+        padding: 1% 0% 0% 0%;
     }
 
     .apresentacao__conteudo {
