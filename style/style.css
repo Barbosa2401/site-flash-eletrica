@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-
 :root {
     --cor-primaria: #8ac0ec;
     --cor-secundaria: #34506a;
@@ -14,7 +13,6 @@
     --fonte-primaria: "Krona One", sans-serif;
     --fonte-secundaria: "Montserrat", sans-serif;
 }
-
 
 * {
     margin: 0;
@@ -31,7 +29,7 @@ body {
     padding: 2% 0% 0% 8%;
     position: relative; 
     background-color: #002147; /* Azul escuro do logo */
-    height: 40px; /* Ajuste a altura do seu header */
+    height: 60px; /* Ajuste a altura do seu header */
 }
 
 .cabeca__menu {
@@ -46,7 +44,7 @@ body {
     position: absolute;
     top: 10px;           /* Distância do topo */
     left: 5%;            /* Alinhamento à esquerda */
-    width: 150px;        /* Tamanho do logo (ajuste como preferir) */
+    width: 180px;        /* Tamanho do logo (ajuste como preferir) */
     height: auto;
     z-index: 10;         /* Garante que fique na frente de outros elementos */
     
@@ -54,18 +52,27 @@ body {
     filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.3));
 }
 
-.links {
+.whatsapp {
+    position: fixed;   /* Fixa na tela mesmo ao rolar */
+    bottom: 20px;      /* Distância do fundo */
+    right: 20px;       /* Distância da direita */
+    background-color: #25d366; /* Verde oficial do WhatsApp */
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 1000;     /* Garante que fique acima de tudo */
     display: flex;
-    gap: 20px;
+    align-items: center;
+    border: none;
+    cursor: pointer;
 }
 
-.cabeca__menu__link {
- 
-    font-family: var(--fonte-secundaria);
-    font-size: 1.12rem;
-    font-weight: 600;
-    color:var(--cor-quinta);
-    text-decoration: none;
+.whatsapp:hover {
+    background-color: #128c7e;
+    transform: scale(1.05); /* Efeito de crescer levemente ao passar o mouse */
+    transition: 0.3s;
 }
 
 .apresentacao {
@@ -159,31 +166,6 @@ body {
     padding: 1%; 
 }
 
-.rodape_link {
-    display: flex;
-    justify-content: center;
-    align-items: Center;
-    gap: 16px;
-    width: 50%;
-    text-align: center;
-    border-radius: 8px;
-    border: 2px solid var(--cor-quarta);
-    font-size: 0.9375rem;
-    font-weight: 400;
-    padding: 5px 18px;
-    text-decoration: none;
-    color: var(--cor-sétima);
-    font-family: var(--fonte-primaria);
-}
-
-.rodape_link:hover {
-    border: 2px solid var(--cor-quarta);
-    background-color: var(--cor-oitava);
-    padding: 1%; 
-}
-
-
-
 .rodape {
     color: var(--cor-quinta);
     background-color: var(--cor-quarta);
@@ -199,6 +181,7 @@ body {
 @media (max-width: 1200px) {
     .cabeca {
         padding: 3%;
+        height: 30px;
     }
 
     .cabeca__menu {
@@ -236,11 +219,5 @@ body {
     .apresentacao__conteudo {
         width: auto;
     }
-
-    .rodape_link_botao {
-    padding: 5% 0% 0% 25%;
-}
-
-    
-    
+      
 }
